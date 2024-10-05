@@ -1,1 +1,13 @@
-<p>navbar works!</p>
+<button mat-button [matMenuTriggerFor]="Menu">Menu</button>
+<mat-menu #Menu="matMenu">
+    <button mat-menu-item>Kezdőlap</button>
+    <button mat-menu-item [matMenuTriggerFor]="services">Szolgáltatások</button>
+    <button mat-menu-item >Referenciák</button>
+    <button mat-menu-item >Szakmai cikkek</button>
+</mat-menu>
+
+<mat-menu #services="matMenu">
+    <button mat-menu-item>Weboldal készítés</button>
+    <button mat-menu-item>Weboldal karbantartás</button>
+</mat-menu>
+
