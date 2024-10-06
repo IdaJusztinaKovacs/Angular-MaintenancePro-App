@@ -1,26 +1,34 @@
-<mat-toolbar>
+<mat-toolbar color="primary" class="mat-toolbar">
+    <span>My Application</span>
+    <span class="example-spacer"></span>
+
+    <button mat-button><a href="/">Főoldal</a></button>
+    <button mat-button><a href="/about">Rólunk</a></button>
+    <button mat-button [matMenuTriggerFor]="menu1">Szolgáltatások</button>
+    <mat-menu #menu1="matMenu">
+        <button mat-menu-item>Item 1</button>
+        <button mat-menu-item>Item 2</button>
+    </mat-menu>
+
+    <button mat-button><a href="/contact">Kapcsolat</a></button>
+
+</mat-toolbar>
+
+<mat-toolbar class="sidenav">
     <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon"
         [matMenuTriggerFor]="Menu">
         <mat-icon>menu</mat-icon>
     </button>
+    <span>My Application</span>
     <mat-menu #Menu="matMenu">
-        <button mat-menu-item>Kezdőlap</button>
-        <button mat-menu-item [matMenuTriggerFor]="services">Szolgáltatások</button>
-        <button mat-menu-item>Referenciák</button>
-        <button mat-menu-item>Szakmai cikkek</button>
+        <button mat-menu-item><a href="/">Főoldal</a></button>
+        <button mat-menu-item><a href="/about">Rólunk</a></button>
+        <button mat-menu-item [matMenuTriggerFor]="menu1">Szolgáltatások</button>
+        <mat-menu #menu1="matMenu">
+            <button mat-menu-item>Item 1</button>
+            <button mat-menu-item>Item 2</button>
+        </mat-menu>
+        <button mat-menu-item><a href="/contact">Kapcsolat</a></button>
     </mat-menu>
 
-    <mat-menu #services="matMenu">
-        <button mat-menu-item>Weboldal készítés</button>
-        <button mat-menu-item>Weboldal karbantartás</button>
-    </mat-menu>
-    
-    <span>My Application</span>
-    <span class="example-spacer"></span>
-    <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
-        <mat-icon>favorite</mat-icon>
-    </button>
-    <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
-        <mat-icon>share</mat-icon>
-    </button>
 </mat-toolbar>

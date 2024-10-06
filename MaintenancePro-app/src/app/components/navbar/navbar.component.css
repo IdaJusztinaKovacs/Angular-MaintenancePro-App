@@ -1,4 +1,25 @@
 .example-spacer {
-    flex: 1 1 auto;
+  flex: 1 1 auto;
+}
+
+.sidenav {
+  display: none;
+}
+
+@media (max-width: 600px) {
+  .mat-toolbar {
+    display: none;
   }
-  
+
+  .sidenav {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  .mat-menu-item a {
+    display: block;
+    width: 100%;
+    text-decoration: none;
+    color: inherit;
+  }
+}
