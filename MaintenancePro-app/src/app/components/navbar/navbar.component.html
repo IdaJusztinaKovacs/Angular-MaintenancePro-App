@@ -1,13 +1,26 @@
-<button mat-button [matMenuTriggerFor]="Menu">Menu</button>
-<mat-menu #Menu="matMenu">
-    <button mat-menu-item>Kezdőlap</button>
-    <button mat-menu-item [matMenuTriggerFor]="services">Szolgáltatások</button>
-    <button mat-menu-item >Referenciák</button>
-    <button mat-menu-item >Szakmai cikkek</button>
-</mat-menu>
+<mat-toolbar>
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon"
+        [matMenuTriggerFor]="Menu">
+        <mat-icon>menu</mat-icon>
+    </button>
+    <mat-menu #Menu="matMenu">
+        <button mat-menu-item>Kezdőlap</button>
+        <button mat-menu-item [matMenuTriggerFor]="services">Szolgáltatások</button>
+        <button mat-menu-item>Referenciák</button>
+        <button mat-menu-item>Szakmai cikkek</button>
+    </mat-menu>
 
-<mat-menu #services="matMenu">
-    <button mat-menu-item>Weboldal készítés</button>
-    <button mat-menu-item>Weboldal karbantartás</button>
-</mat-menu>
-
+    <mat-menu #services="matMenu">
+        <button mat-menu-item>Weboldal készítés</button>
+        <button mat-menu-item>Weboldal karbantartás</button>
+    </mat-menu>
+    
+    <span>My Application</span>
+    <span class="example-spacer"></span>
+    <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+        <mat-icon>favorite</mat-icon>
+    </button>
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+        <mat-icon>share</mat-icon>
+    </button>
+</mat-toolbar>
