@@ -2,7 +2,7 @@ import { Component } from "@angular/core";
 import { NavbarComponent } from "../navbar/navbar.component";
 
 @Component({
-    selector: 'app-test',
+    selector: 'app-home',
     standalone: true,
     imports: [NavbarComponent],
     template: `
@@ -12,6 +12,6 @@ import { NavbarComponent } from "../navbar/navbar.component";
     styles: ['h1 {color:red}']
 })
 
-export class TestComponent {
+export class HomeComponent {
 
 }
